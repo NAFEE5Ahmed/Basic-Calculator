@@ -13,7 +13,7 @@
     border: 10px solid black;
     height: 580px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px #c6c6c6;
+    box-shadow: 0px 0px 20px #c6c6c66e;
 }
 
 .calculator-input-container{
@@ -51,7 +51,7 @@
     cursor: pointer;
 }
 
-#zero{
+#zero, #ac{
     width: 49%;
 }
 
