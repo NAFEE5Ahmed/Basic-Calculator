@@ -31,7 +31,10 @@ plus.addEventListener("click", () => {
 });
 
 function sumOperation(num1, num2) {
-  const result = +num1 + +num2;
+  let result = +num1 + +num2;
+   if (result.toString().length > 10) {
+    result = result.toPrecision(1); // Use exponential notation if more than 9 digits
+  }
   document.querySelector("#calculator-input").value = result;
 }
 
@@ -43,7 +46,10 @@ minus.addEventListener("click", () => {
 });
 
 function minusOperation(num1, num2) {
-  const result = +num1 - +num2;
+  let result = +num1 - +num2;
+   if (result.toString().length > 10) {
+    result = result.toPrecision(1); // Use exponential notation if more than 9 digits
+  }
   document.querySelector("#calculator-input").value = result;
 }
 
@@ -55,7 +61,10 @@ multiply.addEventListener("click", () => {
 });
 
 function multiplyOperation(num1, num2) {
-  const result = +num1 * +num2;
+  let result = +num1 * +num2;
+   if (result.toString().length > 10) {
+    result = result.toPrecision(1); // Use exponential notation if more than 9 digits
+  }
   document.querySelector("#calculator-input").value = result;
 }
 
@@ -67,7 +76,10 @@ divide.addEventListener("click", () => {
 });
 
 function divideOperation(num1, num2) {
-  const result = +num1 / +num2;
+  let result = +num1 / +num2;
+   if (result.toString().length > 10) {
+    result = result.toPrecision(1); // Use exponential notation if more than 9 digits
+  }
   document.querySelector("#calculator-input").value = result;
 }
 
@@ -89,7 +101,10 @@ ac.addEventListener("click", () => {
 });
 
 function percentageOperation(num) {
-  const result = num / 100;
+  let result = num / 100;
+   if (result.toString().length > 10) {
+    result = result.toPrecision(1); // Use exponential notation if more than 9 digits
+  }
   document.querySelector("#calculator-input").value = result;
   if (result === 0) {
     document.querySelector("#calculator-input").value = "";
@@ -106,7 +121,7 @@ equal.addEventListener("click", () => {
   } else if (operator === "-") {
     minusOperation(currentInput, inputNum);
   } else if (operator === "*") {
-    multiplyOperationOperation(currentInput, inputNum);
+    multiplyOperation(currentInput, inputNum);
   } else if (operator === "/") {
     divideOperation(currentInput, inputNum);
   }
